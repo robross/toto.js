@@ -1,5 +1,10 @@
 <html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	</head>
 	<body>
+		<div class="container-fluid">
+
 		<h1>toto.js Tests</h1>
 		<h2>Routing Tests</h2>
 		<ul>
@@ -9,7 +14,8 @@
 			<li><a href="#guid/7a43b73b-4919-4026-964e-743d87349b0b">Test Route with Guid Param</a></li>
 			<li><a href="javascript: window.location.reload();">Test Initial Route is Triggered</a></li>
 		</ul>
-
+		</div>
+		
 		<script type="text/javascript" src="toto.js"></script>
 		<script type="text/javascript">
 			window.toto.addRoute('basicRoute', function() { alert('Pass'); });

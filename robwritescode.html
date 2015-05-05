@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<style>
+
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".js-nav">
+		        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">robwritescode.com</a>
+		    </div>
+		    <div class="collapse navbar-collapse js-nav">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#">Home</a></li>
+		        <li><a href="#blog">Blog</a></li>
+		     	<li><a href="#resume">Resume</a></li>
+		      	<li><a href="#bookshelf">Bookshelf</a></li>
+		      	<li><a href="#playlist">Playlist</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+
+		<div class="container-fluid">
+			<h1 class="page-header js-pageheader"></h1>
+		</div>
+
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="toto.js"></script>
+		<script type="text/javascript">
+			
+			toto.addRoute('(.*?)', function(viewName){
+				$('.navbar li').removeClass('active');
+				$('li a[href="#' + viewName + '"]').parent().addClass('active');
+			}, true);
+
+			toto.addRoute('blog', function() { 
+				$('.js-pageheader').html('Blog');
+			});
+
+			toto.addRoute('resume', function() { 
+				$('.js-pageheader').html('Resume');
+			});
+
+			toto.addRoute('bookshelf', function() { 
+				$('.js-pageheader').html('Bookshelf');
+			});
+
+			toto.addRoute('playlist', function() { 
+				$('.js-pageheader').html('Playlist');
+			});
+
+			toto.addRoute('', function() { 
+				$('.js-pageheader').html('Home');
+			});
+
+			toto.start();
+		</script>
+	</body>
+</html>
